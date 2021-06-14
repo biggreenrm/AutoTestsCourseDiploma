@@ -21,3 +21,11 @@ class ProductPage(BasePage):
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         product_name_in_basket = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_AFTER_ADD_TO_BASKET).text
         assert product_name == product_name_in_basket, "Product names on page and in basket is not equal"
+
+    def should_not_be_present_success_message(self):
+        success_alert = self.is_not_element_present(*ProductPageLocators.SUCCESS_ALERT)
+        assert success_alert, "Success alert is present, but should not"
+    
+    def should_disappear_success_message(self):
+        success_alert = self.is_disappeared(*ProductPageLocators.SUCCESS_ALERT)
+        assert success_alert, "Success alert is present, but should disappear"
