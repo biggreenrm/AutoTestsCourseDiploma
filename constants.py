@@ -12,3 +12,5 @@ SET_OF_PRODUCT_LINKS = [
     "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
     "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"
 ]
+
+FAKE_PASSWORD = "Fakepassword1"
